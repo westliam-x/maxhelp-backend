@@ -1,5 +1,5 @@
 const express = require('express');
-const { logTransaction, getReports } = require('../controllers/financialController');
+const { logTransaction, getReports } = require('../controllers/FinancialController');
 const { verifyToken, adminOnly } = require('../middlewares/authMiddleware');
 const router = express.Router();
 
