@@ -87,7 +87,7 @@ app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/inventory', require('./routes/InventoryRoutes'));
 app.use('/api/feedback', verifyToken, require('./routes/FeedbackRoutes')(io)); // Pass io to FeedbackRoutes
 app.use('/api/financial', verifyToken, adminOnly, require('./routes/FinancialRoutes'));
-
+app.use('/api/shortage', require('./routes/ReportShortage')(io));
 // MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
